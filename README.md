@@ -14,7 +14,9 @@ How works
 ```
 
 Url(*) - parametr of your url page
+
 navigation_text - text of navigation bar
+
 animation - animation of iframe
 
 Look!
