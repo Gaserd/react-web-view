@@ -1,7 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
 import ReactWebView from './component/ReactWebView'
-import './styles/ReactWebView.css'
 
 
 render(
@@ -9,7 +8,6 @@ render(
       <ReactWebView
         url={'https://facebook.github.io/react/'}
         navigation_text={'React'}
-        animation={'bottomontop'}
       />
     </div>,
   document.getElementById('root')

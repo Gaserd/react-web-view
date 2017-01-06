@@ -1,4 +1,5 @@
 import React, { PropTypes, Component } from 'react'
+import './ReactWebView.css'
 
 export default class ReactWebView extends Component {
   onLoadIframe() {
@@ -16,8 +17,8 @@ export default class ReactWebView extends Component {
     }
   }
   render() {
-    const { url } = this.props
-    let { navigation_text, animation } = this.props
+    const { url, animation } = this.props
+    let { navigation_text } = this.props
 
     navigation_text = (typeof navigation_text == 'undefined') ? url : navigation_text
 
@@ -41,7 +42,5 @@ export default class ReactWebView extends Component {
 
 
 ReactWebView.propTypes = {
-  url: PropTypes.string.isRequired,
-  navigation_text: PropTypes.string.isRequired,
-  animation: PropTypes.string.isRequired
+  url: PropTypes.string.isRequired
 }
