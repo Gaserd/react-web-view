@@ -3,6 +3,7 @@ import './ReactWebView.css'
 
 export default class ReactWebView extends Component {
   onLoadIframe() {
+    const { url } = this.props
     document.querySelector('.react__web_view-progress').classList.add('react__web_view-progress--full')
 
     const {animation} = this.props
@@ -15,7 +16,24 @@ export default class ReactWebView extends Component {
           break;
       }
     }
+
+    if (url.indexOf(location.hostname) == -1) {
+      fetch(url)
+      .then((responce) => {
+        console.log(responce)
+      })
+      .catch((e) => {
+        console.log(e)
+        document.getElementById('react__web_view-body').innerHTML = '<div class="react__web_view_error__container"><p class="react__web_view_error_text">Error!</p></div>'
+      })
+    }
+
   }
+
+  onClose() {
+    document.querySelector('.react__web_view__container').remove()
+  }
+
   render() {
     const { url, animation } = this.props
     let { navigation_text } = this.props
@@ -28,11 +46,11 @@ export default class ReactWebView extends Component {
 
     return <div className='react__web_view__container'>
       <div className={classAnimation}>
-        <div className='react__web_view-nav_bar'>
+        <div className='react__web_view-nav_bar' onClick={::this.onClose}>
           <div className='react__web_view-progress'></div>
           <h2 className='react__web_view-nav_bar_text'>{navigation_text}</h2>
         </div>
-        <div className='react__web_view-body'>
+        <div id='react__web_view-body' className='react__web_view-body'>
           <iframe onLoad={::this.onLoadIframe} className='react__web_view-iframe' src={url}></iframe>
         </div>
       </div>

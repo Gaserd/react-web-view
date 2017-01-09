@@ -6,7 +6,7 @@ import ReactWebView from './component/ReactWebView'
 render(
     <div className='app'>
       <ReactWebView
-        url={'https://facebook.github.io/react/'}
+        url={'https://google.com'}
         navigation_text={'React'}
       />
     </div>,
