@@ -21,9 +21,6 @@ class ReactWebView extends Component {
     document.querySelector('.react__web_view').remove()
   }
 
-  reloadComponent() {
-    this.forceUpdate()
-  }
 
   renderHeader() {
     let header = (typeof this.props.header !== 'undefined') ? this.props.header : this.props.url
@@ -34,7 +31,9 @@ class ReactWebView extends Component {
         </div>
         <div className="react__web_view_loader"></div>
         <div className="react__web_view_header_text">{header}</div>
-        <div className="react__web_view_reload" onClick={this.reloadComponent}>
+        <div className="react__web_view_reload" onClick={() => {
+          this.forceUpdate()}
+        }>
           <img alt="reload" src="/images/reload.svg" />
         </div>
       </div>
@@ -63,7 +62,7 @@ class ReactWebView extends Component {
 
 
   render() {
-    let { header, position } = this.props
+    let { position } = this.props
     let them = (typeof this.props.them !== 'undefined') ? this.props.them : ''
     let classNamePosition = (typeof position !== 'undefined') ? `react__web_view react__web_view-${position} ${them}__th` : `react__web_view ${them}__th`
 
