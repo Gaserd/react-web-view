@@ -1,0 +1,123 @@
+.react__web_view {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  background-color: #4a4a4a;
+}
+
+.react__web_view-lt {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.react__web_view-rt {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.react__web_view-lb {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.react__web_view-rb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.react__web_view_header {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  border-bottom: 2px solid #fff;
+}
+
+.react__web_view_error_matching {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  font-size: 23px;
+  color: #fff;
+  top: 50%;
+  margin-top: -25px;
+  left: 50%;
+  margin-left: -100px;
+  text-align: center;
+}
+
+.react__web_view_iframe {
+  width: 100%;
+  height: 86%;
+}
+
+.react__web_view_iframe iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.react__web_view_header_text {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  line-height: 40px;
+  z-index: 12;
+}
+.react__web_view_loader {
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  background-color: #eaeaea;
+  z-index: 10;
+  transition: all 0.7s;
+}
+.react__web_view_loader-full {
+  width: 100%;
+}
+
+.react__web_view_reload {
+  width: 20px;
+  position: absolute;
+  right: 10px;
+  z-index: 13;
+  top: 10px;
+}
+.react__web_view_close {
+  width: 20px;
+  position: absolute;
+  left: 10px;
+  z-index: 13;
+  top: 10px;
+}
+
+.react__web_view_reload img, .react__web_view_close img {
+  width: 100%;
+}
+
+
+.white__th.react__web_view {
+  background-color: #fff;
+}
+.white__th .react__web_view_header {
+  color: #4a4a4a;
+}
+
+.green__th.react__web_view {
+  background-color: #CDDC39;
+}
+.green__th .react__web_view_header {
+  color: #4a4a4a;
+}
+.green__th .react__web_view_loader {
+  background-color: #AFB42B;
+  transition: background-color 1.2s;
+}
+.green__th .react__web_view_loader-full {
+  background-color: #cddc39;
+}

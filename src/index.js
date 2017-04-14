@@ -1,14 +1,9 @@
-import React from 'react'
-import { render } from 'react-dom'
-import ReactWebView from './component/ReactWebView'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ReactWebView from './ReactWebView';
+import './index.css';
 
-
-render(
-    <div className='app'>
-      <ReactWebView
-        url={'https://google.com'}
-        navigation_text={'React'}
-      />
-    </div>,
+ReactDOM.render(
+  <ReactWebView them={'green'} url={'https://facebook.github.io/react/'} />,
   document.getElementById('root')
-)
+);
